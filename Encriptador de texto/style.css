@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Gliker';
+    src: local('Gliker Regular Condensed'), local('Gliker-Regular-Condensed'),
+        url('Gliker-RegularCondensed.woff2') format('woff2'),
+        url('Gliker-RegularCondensed.woff') format('woff'),
+        url('Gliker-RegularCondensed.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }

@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Gilker";
+    src: url('Gliker-RegularCondensed.ttf') format('truetype');
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #1F2841;
+    background-size: auto;
+}
+
+.texto {
+    position: absolute;
+    width: 42%;
+    height: 60%;
+    left: 12%;
+    top: 15%;
+    border: none;
+    font-family: "Gilker";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: #F1EEE5; /* cambiar color de la cajita de text por una mas lindis*/
+}
+
+.texto::placeholder {
+    color: #185C51; /*cambiar color texto por uno mejos*/ 
+}
+
+.texto:focus,
+.texto:active{
+    border: none;
+    outline: none;
+}
+
+.terminos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 78%;
+}
+
+.terminos p {
+    font-family: "Gilker";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 150%;
+    color: #F1EEE5;
+    opacity: 0.8;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botone {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    left: 12%;
+    top: 82%;
+}
+
+.btn-encriptar {
+    align-items: center;
+    justify-content: center;
+    margin-right: 2%;
+    padding: 2%;
+    gap: 10px;
+    width: 25%;
+    background-color: #185C51; /*cambiar estos colores */
+    border: 1px solid #F1EEE5; 
+    border-radius: 24px;
+    font-family: "Gilker";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #F1EEE5;
+}
+
+.btn-desencriptar {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 2%;
+    gap: 10px;
+    width: 25%;
+    background: #185C51;
+    border: 1px solid #F1EEE5;
+    border-radius: 24px;
+    font-family: "Gilker";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #F1EEE5;
+}
+
+.btn-encriptar:hover, .btn-desencriptar:hover{
+    margin: 0,3%;
+    width: 24.5%;
+    padding: 1.8%;
+}
+
+.encriptado {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 30%;
+    height: 90%;
+    left: 60%;
+    top: 5%;
+    background: #F1EEE5;
+    box-shadow: 0px 24px 32px -8px rgb(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+.imagen1{ /*la imagen que se va hacer*/
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    top: 15%;
+}
+
+.mensaje-encriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+
+.mensaje-encriptado h2{
+    width: 60%;
+    font-family: "Gilker";
+    font-size: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: #185C51;
+}
+
+.mensaje-encriptado p {
+    width: 80%;
+    font-family: "Gilker";
+    font-size: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: #185C51;
+}
+
+/*Responsive design*/ 
+
+@media (max-width: 57.5em){
+    .container{
+        display: flex;
+        flex-direction: row;
+    }
+    .encriptar {
+        width: 100%;
+    } 
+    .texto {
+        width: 80%;
+        height: 60%;
+        left:10%; 
+        top: 5%;
+    }
+    .terminos {
+        width: 80%;
+        left: 10%;
+        top: 67%;
+    }
+    .terminos p {
+        font-size: 16px;
+    }
+    .botone{
+        width: 80%;
+        left: 10%;
+        top: 70%;
+    }
+    .btn-encriptar, .btn-desencriptar {
+        margin: 2px;
+        width: 48%;
+        border-radius: 16px;
+    }
+    .btn-encriptar:hover, .btn-desencriptar:hover{
+        margin: 0.3%;
+        width: 47.5%;
+        padding: 1.8%;
+    }
+    .encriptado{
+        width: 80%;
+        height: 15%;
+        left: 10%;
+        top: 80%;
+    }
+    .mensaje-encriptado {
+        width: 100%;
+        top: 5%;
+    }
+    .encriptado img{
+        top: 0;
+        display: none;
+        visibility: hidden;
+    }
+}
